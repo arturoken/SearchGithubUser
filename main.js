@@ -1,5 +1,7 @@
 var boton = document.getElementById("form");
 var input = document.getElementById("input");
+var barra = document.getElementById("barra");
+var swap = document.getElementById("swap");
 boton.addEventListener('submit',function(e){
 
 
@@ -25,6 +27,51 @@ boton.addEventListener('submit',function(e){
 	}
 
 });
+
+barra.addEventListener("click",function(){
+
+	if(swap.className == "swap"){
+
+		swap.classList.add("move");
+		document.documentElement.style.setProperty("--fondoBody", "#f4f6f7");
+		document.documentElement.style.setProperty("--colorBarra", "white");
+		document.documentElement.style.setProperty("--sombra", "#e5e7e9");
+		document.documentElement.style.setProperty("--barraCen", "#e5e7e9");
+		document.documentElement.style.setProperty("--texto", "black");
+		document.documentElement.style.setProperty("--barraCan", "#d6dbdf");
+
+
+
+
+
+
+
+
+
+	}else{
+
+		swap.classList.remove("move");
+		document.documentElement.style.setProperty("--fondoBody", "#001030");
+		document.documentElement.style.setProperty("--colorBarra", "#182B50");
+		document.documentElement.style.setProperty("--sombra", "none");
+		document.documentElement.style.setProperty("--barraCen", "#001030");
+		document.documentElement.style.setProperty("--texto", "white");
+		document.documentElement.style.setProperty("--barraCan", "#182B50");
+		
+
+
+
+
+
+
+
+
+
+
+	}
+
+})
+
 
 
 const apiGitHub = async() => {
